@@ -1,0 +1,62 @@
+{
+  "users": [
+    {
+      "id": "db8c",
+      "email": "ravihr@gmail.com",
+      "password": "ravi123",
+      "role": "recruiter"
+    },
+    {
+      "id": "347b",
+      "email": "kelvin@gmail.com",
+      "password": "kelvin123",
+      "role": "user"
+    },
+    {
+      "id": "ec49",
+      "email": "ravihr@gmail.com",
+      "password": "ravihr123",
+      "role": "recruiter"
+    }
+  ],
+  "jobs": [
+    {
+      "id": "91c4",
+      "title": "Junior Software Engineer",
+      "company": "Infosys Limited",
+      "salary": "₹6,00,000 – ₹8,00,000 per annum",
+      "website": "https://www.infosys.com",
+      "email": "careers@infosys.com",
+      "linkedin": "https://www.linkedin.com/company/infosys",
+      "companyAge": 40,
+      "description": "https://www.linkedin.com/company/infosys",
+      "recruiterEmail": "ravihr@gmail.com",
+      "approved": true
+    },
+    {
+      "id": "ba3f",
+      "title": "Junior Software Engineer",
+      "company": "Infosys Limited",
+      "salary": "₹6,00,000 – ₹8,00,000 per annum",
+      "website": "https://www.infosys.com",
+      "email": "careers@infosys.com",
+      "linkedin": "https://www.linkedin.com/company/infosys",
+      "companyAge": 40,
+      "description": "https://www.linkedin.com/company/infosys",
+      "recruiterEmail": "ravihr@gmail.com",
+      "approved": false
+    }
+  ],
+  "applications": [
+    {
+      "id": "f10f",
+      "name": "kelvin",
+      "email": "kelvin@gmail.com",
+      "resume": "Loga Resume11.pdf",
+      "jobId": "91c4",
+      "jobTitle": "Junior Software Engineer",
+      "recruiterEmail": "ravihr@gmail.com",
+      "userEmail": "kelvin@gmail.com"
+    }
+  ]
+}

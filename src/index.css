@@ -1,13 +1,291 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* =========================
+   GLOBAL RESET
+========================= */
+* {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0;
+  font-family: "Inter", "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top left, #1e3a8a, #020617);
+  color: #e5e7eb;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 12px rgba(59,130,246,.4);
+  }
+  50% {
+    box-shadow: 0 0 28px rgba(59,130,246,.8);
+  }
+  100% {
+    box-shadow: 0 0 12px rgba(59,130,246,.4);
+  }
+}
+
+/* =========================
+   NAVBAR
+========================= */
+.navbar {
+  height: 96px;
+  background: rgba(2,6,23,0.85);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 36px;
+  animation: slideDown 0.6s ease;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.role-badge {
+  margin-left: 30px;
+  padding: 6px 14px;
+  background: rgba(59,130,246,.25);
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* LOGOUT */
+.logout-btn {
+  background: linear-gradient(135deg, #ef4444, #b91c1c);
+  border: none;
+  padding: 10px 22px;
+    width: auto;
+  color: white;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+.logout-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 20px rgba(239,68,68,.6);
+}
+
+/* =========================
+   CENTER LAYOUT
+========================= */
+.center {
+  min-height: calc(100vh - 72px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =========================
+   PAGE
+========================= */
+.page {
+  padding: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.page-title {
+  font-size: 34px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.subtitle {
+  color: #c7d2fe;
+  margin-bottom: 28px;
+}
+
+/* =========================
+   GRID
+========================= */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 26px;
+}
+
+/* =========================
+   CARD (GLASS)
+========================= */
+.card {
+  background: rgba(255,255,255,0.95);
+  color: #020617;
+  padding: 24px;
+  border-radius: 18px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+  animation: fadeUp 0.6s ease;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 30px 65px rgba(0,0,0,0.45);
+}
+
+/* CENTER CARD */
+.dashboard-card {
+  text-align: center;
+}
+
+/* =========================
+   TEXT
+========================= */
+.company {
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.desc {
+  font-size: 14px;
+  color: #475569;
+  margin: 8px 0;
+}
+
+/* =========================
+   BADGES
+========================= */
+.badge {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.badge.real {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.badge.fake {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+/* =========================
+   INPUTS
+========================= */
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
+  font-size: 14px;
+  transition: 0.2s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37,99,235,.25);
+}
+
+input[type="file"] {
+  background: #f8fafc;
+  border: 2px dashed #94a3b8;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+button {
+  width: 100%;
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  font-size: 15px;
+  cursor: pointer;
+  margin-top: 12px;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(37,99,235,.6);
+}
+
+/* OUTLINE BUTTON */
+.btn-outline {
+  background: transparent;
+  color: #2563eb;
+  border: 2px solid #2563eb;
+}
+
+.btn-outline:hover {
+  background: #2563eb;
+  color: white;
+}
+
+/* =========================
+   EMPTY STATE
+========================= */
+.empty {
+  text-align: center;
+  color: #e5e7eb;
+  opacity: 0.8;
+  margin-top: 40px;
+}
+
+/* =========================
+   MODAL (OPTIONAL)
+========================= */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+/* =========================
+   FOOTER SHADOW EFFECT
+========================= */
+.card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+  pointer-events: none;
 }

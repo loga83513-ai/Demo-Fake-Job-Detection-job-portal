@@ -2,16 +2,20 @@
   "name": "job-portal",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "@testing-library/dom": "^10.4.1",
-    "@testing-library/jest-dom": "^6.9.1",
-    "@testing-library/react": "^16.3.2",
-    "@testing-library/user-event": "^13.5.0",
-    "react": "^19.2.4",
-    "react-dom": "^19.2.4",
-    "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
-  },
+ "dependencies": {
+  "@testing-library/dom": "^10.4.1",
+  "@testing-library/jest-dom": "^6.9.1",
+  "@testing-library/react": "^16.3.2",
+  "@testing-library/user-event": "^13.5.0",
+  "axios": "^1.13.4",
+  "chart.js": "^4.5.1",
+  "react": "^18.2.0",
+  "react-dom": "^18.2.0",
+  "react-router-dom": "^6.22.3",
+  "react-scripts": "5.0.1",
+  "web-vitals": "^2.1.4"
+}
+,
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -35,5 +39,15 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
+  "devDependencies": {
+    "jest": "^27.5.1",
+    "json-server": "^1.0.0-beta.5"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+  
 }
