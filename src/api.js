@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const API = axios.create({
-  baseURL: "http://localhost:5002"
+const api = axios.create({
+  baseURL: "https://my-job-api.onrender.com"
 });
 
-export default API;
+export default api;
