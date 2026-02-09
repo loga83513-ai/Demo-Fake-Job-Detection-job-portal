@@ -17,6 +17,12 @@
       "email": "ravihr@gmail.com",
       "password": "ravihr123",
       "role": "recruiter"
+    },
+    {
+      "id": "62f0",
+      "email": "usha@gmail.com",
+      "password": "cjcj78e",
+      "role": "user"
     }
   ],
   "jobs": [
